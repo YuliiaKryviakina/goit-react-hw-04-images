@@ -11,7 +11,7 @@ axios.defaults.params = {
 
 export const fetchImages = async (query, page) => {
   try {
-    const data = await axios.get(`?key=${API_KEY}&q=${query}&page=${page}`);
+    const { data } = await axios.get(`?key=${API_KEY}&q=${query}&page=${page}`);
     return data;
   } catch (error) {
     console.log(error.message);
